@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var key: UITextField!
+    @IBOutlet weak var gazou: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,16 @@ class ViewController: UIViewController {
         let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.commitButtonTapped))
         kbToolBar.items = [spacer, commitButton]
         key.inputAccessoryView = kbToolBar
+        
+        // Screen Size の取得
+        let screenWidth = self.gazou.bounds.width
+        let screenHeight = self.gazou.bounds.height
+        let screenX = self.gazou.frame.origin.x
+        let screenY = self.gazou.frame.origin.y
+        
+        let testDraw = Draw(frame: CGRect(x: screenX, y: screenY,
+                                              width: screenWidth, height: screenHeight))
+        self.view.addSubview(testDraw)
     
     }
     @objc func commitButtonTapped() {
