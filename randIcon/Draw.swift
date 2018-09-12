@@ -18,10 +18,10 @@ class Draw: UIView {
         // UIBezierPath のインスタンス生成
         let line = UIBezierPath();
         // 起点
-        line.move(to: CGPoint(x: 250, y: 260));
+        line.move(to: CGPoint(x: randNum(), y: randNum()));
         // 帰着点
-        line.addLine(to: CGPoint(x: 100, y: 630));
-        line.addLine(to: CGPoint(x: 200, y: 580));
+        line.addLine(to: CGPoint(x: randNum(), y: randNum()));
+        line.addLine(to: CGPoint(x: randNum(), y: randNum()));
         // ラインを結ぶ
         line.close()
         // 色の設定
@@ -33,7 +33,7 @@ class Draw: UIView {
         
         
         // 楕円 -------------------------------------
-        let oval = UIBezierPath(ovalIn: CGRect(x: randNum(), y: randNum(), width: 90, height: 140))
+        let oval = UIBezierPath(ovalIn: CGRect(x: randNum(), y: randNum(), width: randNum(), height: randNum()))
         
         // 塗りつぶし色の設定
         UIColor.gray.setFill()
@@ -49,7 +49,7 @@ class Draw: UIView {
         
         
         // 矩形 -------------------------------------
-        let rectangle = UIBezierPath(rect: CGRect(x: 200,y: 270,width: 120,height: 100))
+        let rectangle = UIBezierPath(rect: CGRect(x: randNum(),y: randNum(),width: randNum(),height: randNum()))
         // stroke 色の設定
         UIColor.magenta.setStroke()
         // ライン幅
@@ -59,7 +59,7 @@ class Draw: UIView {
         
         
         // 角が丸い矩形 -------------------------------------
-        let roundRect = UIBezierPath(roundedRect: CGRect(x: 50, y: 200, width: 210, height: 70), cornerRadius: 10)
+        let roundRect = UIBezierPath(roundedRect: CGRect(x: randNum(), y: randNum(), width: randNum(), height: randNum()), cornerRadius: CGFloat(randNum()))
         // stroke 色の設定
         UIColor.yellow.setStroke()
         roundRect.lineWidth = 6
@@ -67,7 +67,7 @@ class Draw: UIView {
         
         
         // 円弧 -------------------------------------
-        let arc = UIBezierPath(arcCenter: CGPoint(x:180, y:170), radius: 85,  startAngle: 0, endAngle: CGFloat(Double.pi)*4/3, clockwise: true)
+        let arc = UIBezierPath(arcCenter: CGPoint(x:randNum(), y:randNum()), radius: CGFloat(randNum()),  startAngle: CGFloat(arc4random_uniform(180)), endAngle: CGFloat(arc4random_uniform(180)), clockwise: true)
         // 透明色設定
         let aColor = UIColor(red: 1, green: 1, blue: 0.6, alpha: 0.8)
         aColor.setStroke()
