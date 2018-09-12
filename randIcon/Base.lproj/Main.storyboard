@@ -47,6 +47,9 @@
                                 <rect key="frame" x="39" y="600" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="DrawPic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kqc-q0-KgO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-Ij-ngo">
                                 <rect key="frame" x="287" y="600" width="34" height="30"/>

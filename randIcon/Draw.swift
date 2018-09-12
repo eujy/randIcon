@@ -33,7 +33,7 @@ class Draw: UIView {
         
         
         // 楕円 -------------------------------------
-        let oval = UIBezierPath(ovalIn: CGRect(x: 140, y: 190, width: 90, height: 140))
+        let oval = UIBezierPath(ovalIn: CGRect(x: randNum(), y: randNum(), width: 90, height: 140))
         
         // 塗りつぶし色の設定
         UIColor.gray.setFill()
@@ -49,7 +49,7 @@ class Draw: UIView {
         
         
         // 矩形 -------------------------------------
-        let rectangle = UIBezierPath(rect: CGRect(x: 200,y: 370,width: 120,height: 100))
+        let rectangle = UIBezierPath(rect: CGRect(x: 200,y: 270,width: 120,height: 100))
         // stroke 色の設定
         UIColor.magenta.setStroke()
         // ライン幅
@@ -59,7 +59,7 @@ class Draw: UIView {
         
         
         // 角が丸い矩形 -------------------------------------
-        let roundRect = UIBezierPath(roundedRect: CGRect(x: 50, y: 600, width: 210, height: 70), cornerRadius: 10)
+        let roundRect = UIBezierPath(roundedRect: CGRect(x: 50, y: 200, width: 210, height: 70), cornerRadius: 10)
         // stroke 色の設定
         UIColor.yellow.setStroke()
         roundRect.lineWidth = 6
@@ -79,6 +79,11 @@ class Draw: UIView {
         arc.setLineDash(dashPattern, count: 2, phase: 0)
         arc.stroke()
         
+    }
+    
+    func randNum() -> Int{
+        let randValue = arc4random_uniform(243)
+        return Int(randValue)
     }
 
 }
