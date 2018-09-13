@@ -24,8 +24,7 @@ class ViewController: UIViewController {
         self.view.addSubview(testDraw)
         
         // キャプチャする範囲を取得する
-        let rect = CGRect(x: screenX, y: screenY,
-                          width: screenWidth, height: screenHeight)
+        let rect = view.frame
         
         // ビットマップ画像のcontextを作成する
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
@@ -41,6 +40,17 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         IMG = image
+        
+        //IMGの切り取り
+        let newrect = CGRect(x: 110, y: 460,
+                             width: 1020, height: 1020)
+        let newImageView = UIImageView()
+
+        newImageView.frame = newrect
+
+        let imgRef = image.cgImage?.cropping(to: newrect)
+        IMG = UIImage(cgImage: imgRef!, scale: image.scale, orientation: image.imageOrientation)
+
        
     }
     
@@ -77,6 +87,8 @@ class ViewController: UIViewController {
         // UIAlertController を表示
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
     
     
     override func viewDidLoad() {
