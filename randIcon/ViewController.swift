@@ -23,18 +23,16 @@ class ViewController: UIViewController {
         self.view.addSubview(testDraw)
     }
     
+    @IBAction func Save(_ sender: Any) {
+//        // UIImage の画像をカメラロールに画像を保存
+//        UIImageWriteToSavedPhotosAlbum(gazou, self, #selector(self.showResultOfSaveImage(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
-//        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
-//        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
-//        // スペーサー
-//        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
-//        // 閉じるボタン
-//        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.commitButtonTapped))
-//        kbToolBar.items = [spacer, commitButton]
-//        key.inputAccessoryView = kbToolBar
     
     }
     @objc func commitButtonTapped() {
