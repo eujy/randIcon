@@ -9,7 +9,7 @@
 import UIKit
 
 class Draw: UIView {
-
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
@@ -26,6 +26,9 @@ class Draw: UIView {
         line.close()
         // 色の設定
         UIColor.green.setStroke()
+        if(SegCon == 3){
+            UIColor.white.setStroke()
+        }
         // ライン幅
         line.lineWidth = 2
         // 描画
@@ -42,6 +45,9 @@ class Draw: UIView {
         
         // stroke 色の設定
         UIColor.green.setStroke()
+        if(SegCon == 3){
+            UIColor.white.setStroke()
+        }
         // ライン幅
         oval.lineWidth = 2
         // 描画
@@ -52,6 +58,9 @@ class Draw: UIView {
         let rectangle = UIBezierPath(rect: CGRect(x: randNum(),y: randNum(),width: randNum(),height: randNum()))
         // stroke 色の設定
         UIColor.magenta.setStroke()
+        if(SegCon == 3){
+            UIColor.white.setStroke()
+        }
         // ライン幅
         rectangle.lineWidth = 8
         // 描画
@@ -62,6 +71,9 @@ class Draw: UIView {
         let roundRect = UIBezierPath(roundedRect: CGRect(x: randNum(), y: randNum(), width: randNum(), height: randNum()), cornerRadius: CGFloat(randNum()))
         // stroke 色の設定
         UIColor.yellow.setStroke()
+        if(SegCon == 3){
+            UIColor.white.setStroke()
+        }
         roundRect.lineWidth = 6
         roundRect.stroke()
         

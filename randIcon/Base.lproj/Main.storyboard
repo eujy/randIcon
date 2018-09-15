@@ -75,6 +75,10 @@
                                     <segment title="cool"/>
                                     <segment title="mono"/>
                                 </segments>
+                                <connections>
+                                    <action selector="SegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="J1J-0p-3gf"/>
+                                    <action selector="segmentedControl:" destination="9jF-NU-QXG" eventType="valueChanged" id="Csd-gU-gBf"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.77166879858813864" green="1" blue="0.79164571836536479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,6 +90,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="9jF-NU-QXG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>

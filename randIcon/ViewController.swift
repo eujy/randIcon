@@ -8,10 +8,24 @@
 
 import UIKit
 
+var SegCon = 0
+
 class ViewController: UIViewController {
     @IBOutlet weak var key: UITextField!
     @IBOutlet weak var gazou: UIImageView!
     var IMG: UIImage!
+    
+    @IBAction func SegmentedControl(_ sender: UISegmentedControl) {
+        if(sender.selectedSegmentIndex==0){
+            SegCon = 0
+        }else if(sender.selectedSegmentIndex==1){
+            SegCon = 1
+        }else if(sender.selectedSegmentIndex==2){
+            SegCon = 2
+        }else{
+            SegCon = 3
+        }
+    }
     @IBAction func DrawPic(_ sender: Any) {
         // Screen Size の取得
         let screenWidth = self.gazou.bounds.width
