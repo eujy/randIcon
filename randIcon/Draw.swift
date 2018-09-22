@@ -30,7 +30,7 @@ class Draw: UIView {
             UIColor.white.setStroke()
         }
         // ライン幅
-        line.lineWidth = 2
+        line.lineWidth = 4
         // 描画
         line.stroke();
         
